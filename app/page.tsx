@@ -4,10 +4,10 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { ScrollProgressIndicator } from "@/components/scroll-progress-indicator"
+import { MobileProgressIndicator } from "@/components/mobile-progress-indicator"
 import {
   CheckSquare,
   Map,
-  Users,
   FileText,
   MessageSquare,
   Calendar,
@@ -18,6 +18,7 @@ import {
   BookOpen,
   ArrowRight,
   Sparkles,
+  Calculator,
 } from "lucide-react"
 
 export default function HomePage() {
@@ -78,13 +79,6 @@ export default function HomePage() {
       color: "bg-gradient-to-br from-blue-600 to-blue-700",
     },
     {
-      title: "Buddy System",
-      description: "Connect with other students",
-      href: "/buddy-system",
-      icon: Users,
-      color: "bg-gradient-to-br from-blue-700 to-blue-800",
-    },
-    {
       title: "Documents",
       description: "Download important files",
       href: "/documents",
@@ -126,6 +120,13 @@ export default function HomePage() {
       icon: HelpCircle,
       color: "bg-gradient-to-br from-indigo-700 to-blue-800",
     },
+    {
+      title: "Grade Calculator",
+      description: "Calculate your GPA",
+      href: "/grade-calculator",
+      icon: Calculator,
+      color: "bg-gradient-to-br from-green-600 to-green-700",
+    },
   ]
 
   // Calculate which background to show based on scroll position with smoother transitions
@@ -163,6 +164,7 @@ export default function HomePage() {
     <div className="min-h-screen relative overflow-x-hidden">
       {/* Progress Indicators */}
       <ScrollProgressIndicator currentBackground={currentBackground} scrollProgress={scrollProgress} />
+      <MobileProgressIndicator currentBackground={currentBackground} scrollProgress={scrollProgress} />
 
       {/* Main Background with Minimalistic Parallax */}
       <div
@@ -219,7 +221,7 @@ export default function HomePage() {
               }}
             >
               <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent mb-6 drop-shadow-2xl leading-tight">
-                Welcome to UDE
+                Welcome to ISE
               </h1>
               <p className="text-lg md:text-2xl lg:text-3xl text-white/95 mb-4 font-medium drop-shadow-lg">
                 International Studies in Engineering
@@ -272,7 +274,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
               {[
                 { title: "1. Complete Checklist", desc: "Start with essential arrival tasks" },
-                { title: "2. Find a Buddy", desc: "Connect with current students" },
+                { title: "2. Explore Campus", desc: "Use the interactive map" },
                 { title: "3. Join the Forum", desc: "Ask questions and get help" },
               ].map((item, index) => (
                 <Card

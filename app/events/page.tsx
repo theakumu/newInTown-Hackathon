@@ -25,10 +25,10 @@ interface Event {
 const events: Event[] = [
   {
     id: "1",
-    title: "Welcome Week 2025",
+    title: "Welcome Week 2024",
     description:
       "Join us for the official welcome week for new ISE students! Meet your classmates, learn about campus resources, and get ready for an amazing semester. This comprehensive orientation program includes campus tours, academic advising sessions, social mixers, and essential information sessions about life in Germany.",
-    date: new Date("2025-02-27"),
+    date: new Date("2024-02-05"),
     time: "09:00 - 17:00",
     location: "Main Campus Auditorium & Various Locations",
     category: "academic",
@@ -44,7 +44,7 @@ const events: Event[] = [
     title: "International Food Festival",
     description:
       "Taste delicious food from around the world prepared by our international student community. A great opportunity to experience different cultures, share your own culinary traditions, and connect with students from various countries. Live music, cultural performances, and cooking demonstrations included!",
-    date: new Date("2025-04-23"),
+    date: new Date("2024-02-12"),
     time: "12:00 - 18:00",
     location: "Student Center Courtyard",
     category: "cultural",
@@ -59,7 +59,7 @@ const events: Event[] = [
     title: "Research Showcase & Career Fair",
     description:
       "Discover cutting-edge research projects by ISE students and faculty, meet potential employers, learn about internship opportunities, and network with industry professionals. This event combines academic excellence with career development opportunities. Bring your CV and prepare for exciting conversations about your future!",
-    date: new Date("2025-05-20"),
+    date: new Date("2024-02-20"),
     time: "10:00 - 16:00",
     location: "Research Labs & Exhibition Hall",
     category: "academic",
@@ -290,11 +290,11 @@ export default function EventsPage() {
               account. Get behind-the-scenes content and real-time updates!
             </p>
             <Button
-              onClick={() => window.open("https://instagram.com/fachschaft.ise", "_blank")}
+              onClick={() => window.open("https://instagram.com/ise_ude", "_blank")}
               className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold px-8 py-3 text-lg"
             >
               <ExternalLink className="w-5 h-5 mr-2" />
-              Follow @fachschaft.ise
+              Follow @ise_ude
             </Button>
           </CardContent>
         </Card>
